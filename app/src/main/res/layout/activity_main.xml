@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F7FB">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh bạ của tôi"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#1E293B"
+        android:paddingBottom="12dp" />
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tìm tên, số điện thoại..."
+        android:singleLine="true"
+        android:inputType="text"
+        android:padding="12dp" />
+
+    <Spinner
+        android:id="@+id/spinnerFilter"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContacts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnAddContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ Thêm liên hệ" />
+
+</LinearLayout>
