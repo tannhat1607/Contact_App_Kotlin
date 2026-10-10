@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialpadContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:elevation="12dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="16dp"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp">
+
+    <!-- Match suggestion -->
+    <TextView
+        android:id="@+id/txtDialMatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#2563EB"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <!-- Number Display -->
+    <TextView
+        android:id="@+id/txtDialNumber"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:hint="Nhập số điện thoại..."
+        android:textColor="#0F172A"
+        android:textColorHint="#94A3B8"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:singleLine="true" />
+
+    <!-- Keypad Grid -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:layout_marginTop="8dp"
+        android:alignmentMode="alignMargins">
+
+        <LinearLayout
+            android:id="@+id/btnKey1"
+            style="@style/DialpadKeyStyle">
+            <TextView style="@style/DialpadDigitStyle" android:text="1" />
+            <TextView style="@style/DialpadSubtextStyle" android:text=" " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnKey2"
+            style="@style/DialpadKeyStyle">
+            <TextView style="@style/DialpadDigitStyle" android:text="2" />
+            <TextView style="@style/DialpadSubtextStyle" android:text="ABC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnKey3"
+            style="@style/DialpadKeyStyle">
+            <TextView style="@style/DialpadDigitStyle" android:text="3" />
+            <TextView style="@style/DialpadSubtextStyle" android:text="DEF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnKey4"
+            style="@style/DialpadKeyStyle">
+            <TextView style="@style/DialpadDigitStyle" android:text="4" />
+            <TextView style="@style/DialpadSubtextStyle" android:text="GHI" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnKey5"
+            style="@style/DialpadKeyStyle">
+            <TextView style="@style/DialpadDigitStyle" android:text="5" />
+            <TextView style="@style/DialpadSubtextStyle" android:text="JKL" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnKey6"
+            style="@style/DialpadKeyStyle">
+            <TextView style="@style/DialpadDigitStyle" android:text="6" />
+            <TextView style="@style/DialpadSubtextStyle" android:text="MNO" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnKey7"
+            style="@style/DialpadKeyStyle">
+            <TextView style="@style/DialpadDigitStyle" android:text="7" />
+            <TextView style="@style/DialpadSubtextStyle" android:text="PQRS" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnKey8"
+            style="@style/DialpadKeyStyle">
+            <TextView style="@style/DialpadDigitStyle" android:text="8" />
+            <TextView style="@style/DialpadSubtextStyle" android:text="TUV" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnKey9"
+            style="@style/DialpadKeyStyle">
+            <TextView style="@style/DialpadDigitStyle" android:text="9" />
+            <TextView style="@style/DialpadSubtextStyle" android:text="WXYZ" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnKeyStar"
+            style="@style/DialpadKeyStyle">
+            <TextView style="@style/DialpadDigitStyle" android:text="*" />
+            <TextView style="@style/DialpadSubtextStyle" android:text=" " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnKey0"
+            style="@style/DialpadKeyStyle">
+            <TextView style="@style/DialpadDigitStyle" android:text="0" />
+            <TextView style="@style/DialpadSubtextStyle" android:text="+" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnKeyHash"
+            style="@style/DialpadKeyStyle">
+            <TextView style="@style/DialpadDigitStyle" android:text="#" />
+            <TextView style="@style/DialpadSubtextStyle" android:text=" " />
+        </LinearLayout>
+
+    </GridLayout>
+
+    <!-- Call / Backspace Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="12dp">
+
+        <ImageView
+            android:id="@+id/btnDialCall"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_dial_call_btn"
+            android:padding="14dp"
+            android:src="@drawable/ic_call_green"
+            android:contentDescription="Gọi điện" />
+
+        <ImageView
+            android:id="@+id/btnDialBackspace"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="12dp"
+            android:src="@drawable/ic_backspace"
+            android:contentDescription="Xóa" />
+
+    </RelativeLayout>
+
+</LinearLayout>
